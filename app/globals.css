@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light dark;
+  --gray-0: #fbfbfb;
+  --gray-3: #d4d4d8;
+  --gray-5: #a1a1a8;
+  --gray-55: #5a5a61;
+  --gray-7: #323239;
+  --gray-8: #28282e;
+  --gray-9: #202025;
+  --gray-11: #16161a;
+  --beige-0: #f8f4e6;
+  --beige-1: #f1ead5;
+  --beige-2: #ece4ca;
+  --beige-25: #e5dcbd;
+  --beige-3: #ded4b2;
+  --beige-4: #c6ba93;
+  --background: light-dark(var(--beige-0), var(--gray-9));
+  --background-alt: light-dark(var(--beige-1), var(--gray-11));
+  --card: light-dark(var(--beige-1), var(--gray-8));
+  --text: light-dark(var(--gray-8), var(--gray-3));
+  --text-strong: light-dark(var(--gray-11), var(--gray-0));
+  --muted: light-dark(var(--gray-55), var(--gray-5));
+  --border: light-dark(var(--beige-25), var(--gray-7));
+  --border-card: light-dark(var(--beige-3), var(--gray-7));
+  --pink: light-dark(#b12d6c, #f2777a);
+  --yellow: light-dark(#b26a34, #fede91);
+  --sidebar-width: 16.25rem;
+  --radius: 0.5rem;
+  --transition: 0.15s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--text); }
+a { color: var(--pink); font-weight: 600; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--pink) 45%, transparent); text-decoration-thickness: 1px; text-underline-offset: 0.25rem; transition: color var(--transition), background var(--transition); }
+a:hover { color: var(--pink); text-decoration-color: var(--pink); }
+button { font: inherit; }
+
+.site-shell { display: block; min-height: 100vh; }
+.sidebar { display: none; background: var(--background); border-right: 1px solid var(--border); }
+.sidebar-section { margin: 0 1rem 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.sidebar-brand-section { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 1rem; }
+.brand { display: flex; align-items: center; gap: 0.55rem; color: var(--text-strong); font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1rem; font-weight: 600; line-height: 1; text-decoration: none; white-space: nowrap; }
+.brand img { width: 1.5rem; height: 1.5rem; image-rendering: pixelated; object-fit: contain; }
+.brand-actions { display: flex; align-items: center; gap: 0.8rem; }
+.accent-dot { display: block; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--pink); }
+.brand-actions button { display: grid; width: 1.75rem; height: 1.75rem; place-items: center; padding: 0; border: 0; border-radius: var(--radius); background: transparent; color: var(--text); cursor: pointer; font-size: 1.45rem; line-height: 1; }
+.brand-actions button:hover { background: var(--beige-2); }
+.bio { margin: 0; font-size: 0.9375rem; line-height: 1.55; }
+.sidebar nav { display: flex; flex-direction: column; gap: 0.25rem; }
+.sidebar nav a { display: flex; align-items: center; gap: 0.5rem; margin-inline: -0.5rem; padding: 0.35rem 0.5rem; border-radius: var(--radius); color: var(--text); font-size: 1rem; font-weight: 500; text-decoration: none; }
+.sidebar nav a:hover, .sidebar nav a.active { background: var(--background-alt); color: var(--text-strong); }
+.sidebar nav img { width: 1.5rem; height: 1.5rem; object-fit: contain; image-rendering: pixelated; }
+.sidebar-footer { margin-top: auto; }
+.sidebar-footer .sidebar-section { margin-bottom: 0.25rem; padding-bottom: 0; border: 0; }
+.socials { display: flex; gap: 0.25rem; margin-left: -0.35rem; }
+.socials a { display: grid; width: 2rem; height: 2rem; place-items: center; border-radius: var(--radius); color: var(--muted); font-size: 1.15rem; text-decoration: none; }
+.socials a:hover { background: var(--background-alt); color: var(--text-strong); }
+.utility-links { display: flex; align-items: center; gap: 0.75rem; margin: 0 1rem 1rem; }
+.utility-links a { color: var(--muted); font-size: 0.8125rem; font-weight: 500; text-decoration: none; }
+.utility-links a:hover { color: var(--text-strong); }
+.utility-links i { display: block; width: 1px; height: 1rem; background: var(--border); }
+
+.page-content { max-width: 63.75rem; margin: 0 auto; padding: 1.5rem; }
+section { padding: 1.5rem 0; }
+h1, h2, h3 { margin-top: 0; color: var(--text-strong); letter-spacing: -0.025em; line-height: 1.2; }
+h1 { margin-bottom: 1rem; font-size: 2rem; }
+h2 { margin-bottom: 0.5rem; font-size: 1.6rem; }
+h3 { margin-bottom: 0.5rem; font-size: 1.35rem; }
+.section-title { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+.section-title h2 { margin: 0; }
+.section-emoji { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; font-size: 2rem; }
+.soft-button { padding: 0.28rem 0.7rem; border: 1px solid var(--beige-4); border-radius: var(--radius); color: var(--text); background: var(--beige-2); font-size: 0.9rem; font-weight: 600; text-decoration: none; }
+.intro, .empty-state { max-width: 40rem; margin: 0.25rem 0 1.25rem; color: var(--muted); font-size: 1.05rem; }
+.empty-state { font-style: italic; }
+.ruled { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+
+.hero { margin-bottom: 1.5rem; padding-top: 1.5rem; }
+.hero-copy { max-width: 37.5rem; }
+.hero h1 { font-size: 2.5rem; font-weight: 700; }
+.hero p { max-width: 36rem; margin: 0; font-size: 1.25rem; line-height: 1.35; }
+.hero-art { display: none; }
+.timeline { max-width: 41rem; }
+.timeline h2 { margin-bottom: 1.1rem; font-size: 1.3rem; }
+.timeline-row { display: grid; grid-template-columns: 5.75rem 1fr; gap: 0.75rem; margin-top: 1rem; }
+.timeline time, .project-meta time { color: var(--muted); font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.8rem; font-weight: 500; }
+.timeline-row p, .also { margin: 0; font-size: 1.05rem; }
+.also { margin-top: 1.25rem; }
+.post-list { display: grid; gap: 0.3rem; margin-top: 1rem; }
+.post { display: grid; grid-template-columns: 2rem 1fr; gap: 0.6rem; padding: 0.55rem; border-radius: var(--radius); }
+.post.featured { background: var(--background-alt); }
+.post-icon { font-size: 1.25rem; }.post-copy { display: grid; }.post-copy a { color: var(--text-strong); text-decoration: none; }.post-copy a:hover { color: var(--pink); text-decoration: underline; }.post-copy time { color: var(--muted); font-size: 0.8rem; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }.tags { display: none; }
+.series-list { display: grid; gap: 1rem; max-width: 44rem; }.series-list article { display: grid; grid-template-columns: 2.4rem 1fr; gap: 0.75rem; }.series-list article > span { display: grid; width: 2rem; height: 2rem; place-items: center; border-radius: 0.25rem; background: #f9df4c; color: var(--gray-8); font-weight: 800; }.series-list article:nth-child(2) > span, .series-list article:nth-child(3) > span { border-radius: 50%; background: #75c4e5; color: white; }.series-list a { color: var(--text-strong); text-decoration: none; }.series-list p { margin: 0.1rem 0 0; color: var(--muted); font-size: 1rem; }
+
+.projects-page .page-content, .about-content { min-height: 100vh; }
+.projects-hero { max-width: 43rem; margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 0; }
+.projects-hero > div { display: flex; align-items: center; gap: 1rem; }.projects-hero h1 { margin: 0; font-size: 2.5rem; }.project-heading-icon { width: 2.5rem; height: 2.5rem; object-fit: contain; image-rendering: pixelated; }.projects-hero p { margin: 1rem 0 0; font-size: 1.2rem; line-height: 1.55; }
+.projects-page > .page-content > section:not(.projects-hero) { min-height: 14rem; }
+
+.about-hero { margin-top: 1.5rem; padding: 0 0 1.5rem; }.about-hero h1 { margin: 0; font-size: 2.5rem; }.about-intro { display: grid; gap: 2rem; align-items: start; max-width: 53rem; padding-top: 0.5rem; }.about-copy { max-width: 38rem; font-size: 1.08rem; }.about-copy p { margin: 0 0 1.35rem; }.about-photo { overflow: hidden; border-radius: var(--radius); background: var(--background); }.about-photo img { display: block; width: 100%; height: auto; object-fit: cover; }.about-section { max-width: 53rem; border-top: 1px solid var(--border); }.about-section h2 { margin-bottom: 1rem; font-size: 2rem; }.about-section h3 { margin: 2rem 0 1rem; color: var(--muted); font-size: 1.5rem; }.about-section p { margin: 0 0 1rem; }.about-section ul { margin: 0; padding-left: 1.35rem; }.about-section li { margin-bottom: 0.35rem; }
+
+footer { margin-top: 1.5rem; padding: 2rem 0 2.5rem; border-top: 1px solid var(--border); color: var(--muted); } footer div { display: flex; flex-wrap: wrap; gap: 1rem; } footer a { color: var(--muted); font-size: 0.9rem; text-decoration: none; } footer p { margin: 1.5rem 0 0; color: var(--text); font-size: 0.95rem; } footer span { color: var(--pink); }
+
+@media (min-width: 50rem) { .page-content { padding: 2rem; }.hero { padding-top: 2rem; }.post { grid-template-columns: 2rem 1fr auto; }.tags { display: flex; max-width: 15rem; flex-wrap: wrap; justify-content: flex-end; gap: 0.35rem; }.tags span { padding: 0.1rem 0.45rem; border: 1px solid var(--border); border-radius: 0.45rem; color: var(--muted); font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.75rem; font-weight: 600; }.about-intro { grid-template-columns: minmax(0, 1fr) 18rem; }.about-photo img { min-height: 28rem; object-fit: cover; } }
+@media (min-width: 63.75rem) { .site-shell { display: grid; grid-template-columns: var(--sidebar-width) minmax(0, 1fr); max-width: 84rem; margin: 0 auto; }.sidebar { position: sticky; top: 0; display: flex; height: 100vh; flex-direction: column; overflow-y: auto; }.page-content { width: 100%; max-width: 66rem; margin: 0; padding: 2rem; }.hero { padding-top: 1.5rem; }.hero-art { display: block; width: 15.625rem; height: 15.625rem; flex: 0 0 15.625rem; }.hero-art img { display: block; width: 100%; height: 100%; object-fit: contain; }.hero { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; }.hero h1 { font-size: 3rem; }.about-intro { grid-template-columns: minmax(0, 1fr) 20rem; max-width: 60rem; }.about-photo img { min-height: 30rem; } }
+@media (min-width: 85rem) { .page-content { padding: 2rem 3.5rem; }.hero { padding-top: 2rem; }.hero-art { width: 17rem; height: 17rem; flex-basis: 17rem; } }
+@media (max-width: 49.99rem) { .sidebar { position: sticky; top: 0; z-index: 2; display: flex; height: auto; padding: 0.75rem 1rem; align-items: center; border-right: 0; border-bottom: 1px solid var(--border); }.sidebar-section:not(.sidebar-brand-section), .sidebar-footer { display: none; }.sidebar-brand-section { width: 100%; margin: 0; padding: 0; border: 0; }.brand-actions { margin-left: auto; }.page-content { padding: 1.5rem; }.hero h1 { font-size: 2.25rem; }.hero p { font-size: 1.1rem; }.timeline-row { grid-template-columns: 1fr; gap: 0.15rem; }.projects-hero h1, .about-hero h1 { font-size: 2.25rem; }.projects-hero p { font-size: 1.05rem; }.section-emoji { width: 2.2rem; height: 2.2rem; font-size: 1.7rem; } }
