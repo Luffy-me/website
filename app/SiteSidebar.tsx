@@ -17,7 +17,7 @@ export function SiteSidebar({ active }: { active: string }) {
       </nav>
     </div>
     <div className="sidebar-footer">
-      {(profile.links.email || profile.links.github || profile.links.linkedin) && <div className="sidebar-section"><div className="socials">{profile.links.email && <a href={`mailto:${profile.links.email}`} aria-label="Email">✉</a>}{profile.links.github && <a href={profile.links.github} aria-label="GitHub">⌘</a>}{profile.links.linkedin && <a href={profile.links.linkedin} aria-label="LinkedIn">in</a>}</div></div>}
+      {(profile.links.email || profile.links.phone || profile.links.github || profile.links.linkedin) && <div className="sidebar-section"><div className="socials">{profile.links.email && <a href={`mailto:${profile.links.email}`} aria-label="Email">✉</a>}{profile.links.phone && <a href={`tel:${profile.links.phone}`} aria-label="Phone">☎</a>}{profile.links.github && <a href={profile.links.github} aria-label="GitHub">⌘</a>}{profile.links.linkedin && <a href={profile.links.linkedin} aria-label="LinkedIn">in</a>}</div></div>}
       {profile.links.resume && <div className="utility-links"><a href={profile.links.resume}>Resume</a></div>}
     </div>
   </aside>;
