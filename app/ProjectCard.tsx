@@ -1,0 +1,6 @@
+import Link from "next/link";
+import type { Project } from "./projects-data";
+
+export function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
+  return <article className={`project-card${featured ? " project-card-featured" : ""}`}><div className="project-card-topline"><span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>{project.status}</span><span aria-hidden="true" className="project-pixel-mark">✦</span></div><h3><Link href={`/projects/${project.slug}`}>{project.name}</Link></h3><p>{project.summary}</p><ul className="capability-list">{project.capabilities.map((capability) => <li key={capability}>{capability}</li>)}</ul><div className="tag-list" aria-label={`${project.name} technologies`}>{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div><div className="project-actions"><Link className="button button-secondary" href={`/projects/${project.slug}`}>Case study <span aria-hidden="true">→</span></Link>{project.links?.live && <a className="button button-secondary" href={project.links.live}>Live product <span aria-hidden="true">↗</span></a>}{project.links?.source && <a className="button button-secondary" href={project.links.source}>Source <span aria-hidden="true">↗</span></a>}</div></article>;
+}

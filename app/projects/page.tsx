@@ -1,12 +1,14 @@
+import { MobileNavigation } from "../MobileNavigation";
+import type { Metadata } from "next";
+import { ProjectCard } from "../ProjectCard";
+import { SiteFooter } from "../SiteFooter";
 import { SiteSidebar } from "../SiteSidebar";
+import { projects } from "../projects-data";
+
+export const metadata: Metadata = { title: "Work — Dey Intelligence", description: "Selected AI systems, developer tools, and research-driven products by Abhishek Dey.", alternates: { canonical: "/projects" }, openGraph: { url: "/projects" } };
 
 export default function ProjectsPage() {
-  return <main className="site-shell projects-page">
-    <SiteSidebar active="projects" />
-    <div className="page-content">
-      <section className="projects-hero"><div><img className="project-heading-icon" src="/images/projects-icon.png" alt="Pixel cat mascot" /><h1>Projects</h1></div><p>Experiments, software, and research-driven tools I&apos;m building along the way.</p></section>
-      <section><p className="empty-state">Your projects will appear here.</p></section>
-      <footer><div><a href="#">✉ Email signup</a><a href="#">◔ RSS feed</a><a href="#">🦋 Bluesky</a><a href="#">☕ Buy me a coffee</a></div><p>Made with <span>♥</span> by Abhishek Dey</p></footer>
-    </div>
-  </main>;
+  return <div className="site-shell projects-page"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+    <main className="page-content" id="main-content"><section className="projects-hero"><div><img className="project-heading-icon" src="/images/projects-icon.png" alt="" /><h1>Work</h1></div><p>Software and research-driven products designed for specific, practical problems.</p></section><section className="project-grid projects-grid-full" aria-label="Projects">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</section><SiteFooter /></main>
+  </div>;
 }

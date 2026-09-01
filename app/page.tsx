@@ -1,31 +1,28 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { MobileNavigation } from "./MobileNavigation";
+import { ProjectCard } from "./ProjectCard";
+import { SiteFooter } from "./SiteFooter";
 import { SiteSidebar } from "./SiteSidebar";
+import { projects } from "./projects-data";
+import { profile } from "./site-config";
 
-function SectionTitle({ icon, title, action }: { icon?: string; title: string; action?: string }) {
-  return <div className="section-title">{icon && <span className="section-emoji">{icon}</span>}<h2>{title}</h2>{action && <a className="soft-button" href="#">{action}</a>}</div>;
-}
+export const metadata: Metadata = {
+  title: "Dey Intelligence — Abhishek Dey, AI Engineer",
+  description: profile.description,
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 export default function Home() {
-  return (
-    <main className="site-shell">
-      <SiteSidebar active="home" />
-
-      <div className="page-content" id="top">
-        <section className="hero" id="about">
-          <div className="hero-copy"><h1>Hey, I&apos;m Abhishek Dey!</h1><p>Engineer. Researcher. Builder.<br />Working at the intersection of AI, software, and economics.</p></div>
-          <div className="hero-art"><img src="/images/hero-illustration.png" alt="Illustration of Abhishek Dey working at a laptop" /></div>
-        </section>
-        <section className="timeline"><h2>A little about my work</h2>
-          <div className="timeline-row"><time>Focus</time><p>Building thoughtful software and researching practical applications of artificial intelligence.</p></div>
-          <div className="timeline-row"><time>Lens</time><p>Exploring the ways technology, incentives, and economics shape the systems we use.</p></div>
-          <div className="timeline-row"><time>Here</time><p>A growing collection of research notes, experiments, and work in progress.</p></div>
-          <p className="also"><a href="/about">More about me</a>: the tools I use, what I&apos;m working on, and ways to get in touch.</p>
-        </section>
-
-        <section id="latest" className="ruled"><SectionTitle title="Writing" /><p className="intro">Research articles, technical notes, and ideas in progress.</p><p className="empty-state">Articles coming soon.</p></section>
-
-        <section id="projects" className="ruled"><SectionTitle icon="👾" title="Projects" action="All Projects" /><p className="intro">Open-source projects I&apos;ve worked on over the years.</p><p className="empty-state">Projects coming soon.</p></section>
-        <footer><div><a href="#">✉ Email signup</a><a href="#">◔ RSS feed</a><a href="#">🦋 Bluesky</a><a href="#">☕ Buy me a coffee</a></div><p>Made with <span>♥</span> by Abhishek Dey</p></footer>
-      </div>
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="home" /><MobileNavigation active="home" />
+    <main className="page-content" id="main-content"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "ProfilePage", mainEntity: { "@type": "Person", name: profile.name, jobTitle: profile.role, url: profile.siteUrl, description: profile.description } }) }} />
+      <section className="hero"><div className="hero-copy"><p className="eyebrow">{profile.name}</p><h1>{profile.role}</h1><p>I build reliable AI systems, developer tools, and research-driven products at the intersection of software and economics.</p><div className="hero-actions"><a className="button button-primary" href="#featured-work">View selected work <span aria-hidden="true">↓</span></a>{profile.links.github && <a className="button button-secondary" href={profile.links.github}>GitHub <span aria-hidden="true">↗</span></a>}{profile.links.resume && <a className="button button-secondary" href={profile.links.resume}>Resume <span aria-hidden="true">↗</span></a>}</div></div><div className="hero-art"><img src="/images/hero-illustration.png" alt="Illustration of Abhishek Dey working at a laptop" /></div></section>
+      <section className="capabilities" aria-label="Capabilities"><div><strong>AI systems</strong><span>Grounded, reliable product behavior</span></div><div><strong>Developer tools</strong><span>Useful software for technical workflows</span></div><div><strong>Research products</strong><span>Clear information for real decisions</span></div></section>
+      <section id="featured-work" className="ruled"><div className="section-title"><h2>Featured work</h2><Link className="soft-button" href="/projects">All projects</Link></div><p className="intro">Practical products for monitoring, trusted information, and real-time conversation.</p><div className="project-grid">{projects.map((project) => <ProjectCard key={project.slug} project={project} featured />)}</div></section>
+      <section className="current-focus ruled"><p className="eyebrow">Current focus · updated {profile.currentFocusUpdated}</p><h2>Building at the boundary of reliable AI and useful software.</h2><p>Developing UniAssist, iterating on a Russian–English voice-interpreter prototype, and exploring information products where grounded answers matter.</p></section>
+      {(profile.links.email || profile.links.linkedin) && <section className="contact-section ruled"><h2>Contact</h2><p>For product, research, and collaboration conversations.</p><div className="hero-actions">{profile.links.email && <a className="button button-primary" href={`mailto:${profile.links.email}`}>Email Abhishek <span aria-hidden="true">↗</span></a>}{profile.links.linkedin && <a className="button button-secondary" href={profile.links.linkedin}>LinkedIn <span aria-hidden="true">↗</span></a>}</div></section>}
+      <SiteFooter />
     </main>
-  );
+  </div>;
 }
