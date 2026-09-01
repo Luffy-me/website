@@ -5,15 +5,15 @@ import { navigationItems, profile } from "./site-config";
 export function SiteSidebar({ active }: { active: string }) {
   return <aside className="sidebar">
     <div className="sidebar-section sidebar-brand-section">
-      <Link className="brand" href="/"><img src="/images/nav-floppy.png" alt="" /><span>{profile.name}</span></Link>
-      <div className="brand-actions"><span className="accent-dot" aria-hidden="true" /><ThemeToggle /></div>
+      <Link className="brand" href="/"><span className="brand-mark" aria-hidden="true">D</span><span><strong>Dey Intelligence</strong><small>by {profile.name}</small></span></Link>
+      <div className="brand-actions"><ThemeToggle /></div>
     </div>
     <div className="sidebar-section">
-      <p className="bio">I&apos;m <a href="/about">{profile.name}</a>, an AI engineer and product builder working across software, research, and economics.</p>
+      <p className="bio">A personal research and product studio by <a href="/about">{profile.name}</a>.</p>
     </div>
     <div className="sidebar-section">
       <nav aria-label="Primary navigation">
-        {navigationItems.map((item) => <a key={item.href} className={active === item.label.toLowerCase() ? "active" : undefined} href={item.href}><img src={item.image} alt="" /><span>{item.label}</span></a>)}
+        {navigationItems.map((item) => <a key={item.href} className={active === item.label.toLowerCase() ? "active" : undefined} href={item.href}><span>{item.label}</span></a>)}
       </nav>
     </div>
     <div className="sidebar-footer">

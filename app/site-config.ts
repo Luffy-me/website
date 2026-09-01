@@ -11,8 +11,8 @@ export const profile = {
 export const hasWriting = false;
 
 export const navigationItems = [
-  { href: "/projects", label: "Work", image: "/images/nav-projects.png" },
-  ...(hasWriting ? [{ href: "/writing", label: "Writing", image: "/images/nav-blog.png" }] : []),
-  { href: "/about", label: "About", image: "/images/nav-floppy.png" },
-  ...(profile.links.resume ? [{ href: profile.links.resume, label: "Resume", image: "/images/nav-search.png" }] : []),
+  { href: "/projects", label: "Work" },
+  ...(hasWriting ? [{ href: "/writing", label: "Writing" }] : []),
+  { href: "/about", label: "About" },
+  ...(profile.links.resume ? [{ href: profile.links.resume, label: "Resume" }] : []),
 ];

@@ -9,6 +9,6 @@ export const metadata: Metadata = { title: "Work — Dey Intelligence", descript
 
 export default function ProjectsPage() {
   return <div className="site-shell projects-page"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
-    <main className="page-content" id="main-content"><section className="projects-hero"><div><img className="project-heading-icon" src="/images/projects-icon.png" alt="" /><h1>Work</h1></div><p>Software and research-driven products designed for specific, practical problems.</p></section><section className="project-grid projects-grid-full" aria-label="Projects">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</section><SiteFooter /></main>
+    <main className="page-content" id="main-content"><section className="projects-hero"><p className="eyebrow">Selected systems</p><h1>Work</h1><p>Software and research-driven products designed for specific, practical problems.</p></section><section className="project-grid projects-grid-full" aria-label="Projects">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</section><SiteFooter /></main>
   </div>;
 }

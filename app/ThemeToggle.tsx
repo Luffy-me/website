@@ -22,5 +22,5 @@ export function ThemeToggle() {
     window.localStorage.setItem("theme", nextTheme);
   }
 
-  return <button type="button" aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"} aria-pressed={theme === "dark"} onClick={toggleTheme}><span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span></button>;
+  return <button className="theme-toggle" type="button" aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"} aria-pressed={theme === "dark"} onClick={toggleTheme}><span className="theme-toggle-indicator" aria-hidden="true" /></button>;
 }

@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: { default: "Dey Intelligence — Abhishek Dey, AI Engineer", template: "%s" },
   description: profile.description,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: profile.brand, title: "Dey Intelligence — Abhishek Dey, AI Engineer", description: profile.description, images: [{ url: "/og.png", width: 1731, height: 909, alt: "Dey Intelligence — Abhishek Dey, AI Engineer & Product Builder" }] },
-  twitter: { card: "summary_large_image", title: "Dey Intelligence — Abhishek Dey, AI Engineer", description: profile.description, images: ["/og.png"] },
+  openGraph: { type: "website", siteName: profile.brand, title: "Dey Intelligence — Abhishek Dey, AI Engineer", description: profile.description, images: [{ url: "/og-v2.png", width: 1731, height: 909, alt: "Dey Intelligence — Abhishek Dey, AI Engineer & Product Builder" }] },
+  twitter: { card: "summary_large_image", title: "Dey Intelligence — Abhishek Dey, AI Engineer", description: profile.description, images: ["/og-v2.png"] },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
