@@ -15,6 +15,7 @@ export const profile = {
 } as const;
 
 export const hasWriting = true;
+export const hasReading = true;
 
 export const timeline = [
   {
@@ -32,6 +33,7 @@ export const timeline = [
 export const navigationItems = [
   { href: "/projects", label: "Work" },
   ...(hasWriting ? [{ href: "/writing", label: "Writing & Research" }] : []),
+  ...(hasReading ? [{ href: "/reading", label: "Reading" }] : []),
   { href: "/about", label: "About" },
   ...(profile.links.resume ? [{ href: profile.links.resume, label: "Resume" }] : []),
 ];
