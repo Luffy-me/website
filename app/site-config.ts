@@ -16,6 +16,19 @@ export const profile = {
 
 export const hasWriting = true;
 
+export const timeline = [
+  {
+    period: "2019–2022",
+    title: "Computer Science",
+    description: "Completed a bachelor’s degree, building a foundation in software, systems, and technical problem-solving.",
+  },
+  {
+    period: "2025–2027",
+    title: "International Business & Economics",
+    description: "Studying at South Ural State University, with a focus on international business and economics.",
+  },
+] as const;
+
 export const navigationItems = [
   { href: "/projects", label: "Work" },
   ...(hasWriting ? [{ href: "/writing", label: "Writing & Research" }] : []),
