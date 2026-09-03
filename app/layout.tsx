@@ -10,8 +10,9 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: profile.brand, title: "Dey Intelligence — Abhishek Dey, AI Engineer", description: profile.description, images: [{ url: "/og-v2.png", width: 1731, height: 909, alt: "Dey Intelligence — Abhishek Dey, AI Engineer & Product Builder" }] },
   twitter: { card: "summary_large_image", title: "Dey Intelligence — Abhishek Dey, AI Engineer", description: profile.description, images: ["/og-v2.png"] },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/images/dey-intelligence-mark.png",
+    shortcut: "/images/dey-intelligence-mark.png",
+    apple: "/images/dey-intelligence-mark.png",
   },
 };
 

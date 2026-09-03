@@ -1,11 +1,12 @@
 import { ThemeToggle } from "./ThemeToggle";
 import Link from "next/link";
+import { LogoMark } from "./LogoMark";
 import { navigationItems, profile } from "./site-config";
 
 export function SiteSidebar({ active }: { active: string }) {
   return <aside className="sidebar">
     <div className="sidebar-section sidebar-brand-section">
-      <Link className="brand" href="/"><span className="brand-mark" aria-hidden="true">D</span><span><strong>Dey Intelligence</strong><small>by {profile.name}</small></span></Link>
+      <Link className="brand" href="/"><LogoMark /><span><strong>Dey Intelligence</strong><small>by {profile.name}</small></span></Link>
       <div className="brand-actions"><ThemeToggle /></div>
     </div>
     <div className="sidebar-section">
