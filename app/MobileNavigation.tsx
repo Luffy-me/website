@@ -3,4 +3,23 @@ import Link from "next/link";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { navigationItems, profile } from "./site-config";
-export function MobileNavigation({ active }: { active: string }) { const [open, setOpen] = useState(false); const close = () => setOpen(false); return <header className="mobile-header"><div className="mobile-bar"><Link href="/" className="brand" onClick={close}><span className="brand-mark" aria-hidden="true">D</span><span><strong>Dey Intelligence</strong><small>by {profile.name}</small></span></Link><div className="mobile-actions"><ThemeToggle /><button className={`menu-button${open ? " is-open" : ""}`} type="button" aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen((value) => !value)}><span className="menu-icon" aria-hidden="true" /></button></div></div><nav id="mobile-navigation" className={open ? "mobile-menu is-open" : "mobile-menu"} aria-label="Primary navigation">{navigationItems.map((item) => <Link key={item.href} href={item.href} className={active === item.label.toLowerCase() ? "active" : undefined} onClick={close}>{item.label}</Link>)}</nav></header>; }
+
+export function MobileNavigation({ active }: { active: string }) {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
+  return <header className="mobile-header">
+    <div className="mobile-bar">
+      <Link href="/" className="brand" onClick={close}><span className="brand-mark" aria-hidden="true">D</span><span><strong>Dey Intelligence</strong><small>by {profile.name}</small></span></Link>
+      <div className="mobile-actions">
+        <ThemeToggle />
+        <button className={`menu-button${open ? " is-open" : ""}`} type="button" aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen((value) => !value)}><span className="menu-icon" aria-hidden="true" /></button>
+      </div>
+    </div>
+    <nav id="mobile-navigation" className={open ? "mobile-menu is-open" : "mobile-menu"} aria-label="Primary navigation" aria-hidden={!open}>
+      <div className="mobile-menu-inner">
+        {navigationItems.map((item) => <Link key={item.href} href={item.href} className={active === item.label.toLowerCase() ? "active" : undefined} onClick={close} tabIndex={open ? undefined : -1}>{item.label}</Link>)}
+      </div>
+    </nav>
+  </header>;
+}
