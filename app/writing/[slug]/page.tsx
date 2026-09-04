@@ -10,7 +10,7 @@ import { blogPosts } from "../../writing-data";
 type PageProps = { params: Promise<{ slug: string }> };
 
 function getPost(slug: string) {
-  return blogPosts.find((post) => post.slug === slug);
+  return blogPosts.find((post) => post.slug === slug && !post.href);
 }
 
 function displayDate(value: string) {
@@ -18,7 +18,7 @@ function displayDate(value: string) {
 }
 
 export function generateStaticParams() {
-  return blogPosts.map(({ slug }) => ({ slug }));
+  return blogPosts.filter((post) => !post.href).map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
