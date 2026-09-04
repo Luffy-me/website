@@ -14,6 +14,13 @@ const description = "An Indian master's student shares an honest South Ural Stat
 export const metadata: Metadata = {
   title: `${title} — Dey Intelligence`,
   description,
+  keywords: [
+    "South Ural State University experience",
+    "South Ural State University review",
+    "SUSU international student",
+    "study in Chelyabinsk",
+    "master's degree in Russia",
+  ],
   alternates: { canonical: path },
   openGraph: {
     type: "article",
@@ -22,6 +29,12 @@ export const metadata: Metadata = {
     description,
     publishedTime: "2026-09-04",
     images: [{ url: "/images/susu-experience/susu-campus-day.jpeg", width: 1536, height: 1152, alt: "South Ural State University in Chelyabinsk" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/susu-experience/susu-campus-day.jpeg"],
   },
 };
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { MobileNavigation } from "../../MobileNavigation";
 import { SiteFooter } from "../../SiteFooter";
 import { SiteSidebar } from "../../SiteSidebar";
@@ -10,7 +10,7 @@ import { blogPosts } from "../../writing-data";
 type PageProps = { params: Promise<{ slug: string }> };
 
 function getPost(slug: string) {
-  return blogPosts.find((post) => post.slug === slug && !post.href);
+  return blogPosts.find((post) => post.slug === slug);
 }
 
 function displayDate(value: string) {
@@ -24,7 +24,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const post = getPost((await params).slug);
   if (!post) return {};
-  const path = `/writing/${post.slug}`;
+  const path = post.href ?? `/writing/${post.slug}`;
   return {
     title: `${post.title} — Dey Intelligence`,
     description: post.summary,
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function ArticlePage({ params }: PageProps) {
   const post = getPost((await params).slug);
   if (!post) notFound();
+  if (post.href) redirect(post.href);
   const url = `${profile.siteUrl}/writing/${post.slug}`;
   const personId = `${profile.siteUrl}/about#person`;
   const schema = {

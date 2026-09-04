@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     slug: "south-ural-state-university-experience-review",
     href: "/south-ural-state-university-experience-review",
     title: "South Ural State University Experience: My Honest Review",
-    summary: "My experience as an international master's student studying Economics and International Business in Chelyabinsk, Russia.",
+    summary: "An Indian master's student shares an honest South Ural State University review covering academics, professors, scholarships, Russian life, work, and Chelyabinsk.",
     publishedAt: "2026-09-04",
     topic: "Student experience",
     sections: [],
