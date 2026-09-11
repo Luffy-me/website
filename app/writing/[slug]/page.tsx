@@ -18,7 +18,7 @@ function displayDate(value: string) {
 }
 
 export function generateStaticParams() {
-  return blogPosts.filter((post) => !post.href).map(({ slug }) => ({ slug }));
+  return blogPosts.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

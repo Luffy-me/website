@@ -92,6 +92,21 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
 
+## Cloudflare Pages
+
+The production website is configured as a static Next.js export for Cloudflare
+Pages. Connect the GitHub repository in **Workers & Pages** and use:
+
+- Framework preset: `Next.js (Static HTML Export)`
+- Build command: `npm run build`
+- Build output directory: `out`
+- Root directory: repository root
+- Production branch: `main`
+- Node.js version: `22.13.0` (pinned in `.nvmrc`)
+
+No application environment variables are required. `NEXT_PUBLIC_SITE_URL` is an
+optional build-time override and should be `https://deyintelligence.com` if set.
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)

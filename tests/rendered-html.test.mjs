@@ -16,5 +16,6 @@ test("portfolio source contains project routes and no placeholder hrefs", async 
   assert.match(projects, /Ozon Price Tracker/);
   assert.match(projects, /UniAssist/);
   assert.match(projects, /Ru2En Interpreter/);
-  assert.match(config, /links: \{ github: undefined/);
+  assert.match(config, /siteUrl: process\.env\.NEXT_PUBLIC_SITE_URL \?\? "https:\/\/deyintelligence\.com"/);
+  assert.match(config, /github: "https:\/\/github\.com\/Luffy-me"/);
 });

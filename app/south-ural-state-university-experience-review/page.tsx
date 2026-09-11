@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities -- Preserve the published article's typography and text. */
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";

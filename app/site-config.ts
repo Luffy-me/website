@@ -3,7 +3,7 @@ export const profile = {
   brand: "Dey Intelligence",
   role: "AI Engineer & Product Builder",
   description: "Portfolio of Abhishek Dey, an AI engineer and product builder creating reliable AI systems, developer tools, and research-driven software.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://dey-intelligence.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://deyintelligence.com",
   currentFocusUpdated: "September 1, 2026",
   links: {
     github: "https://github.com/Luffy-me",
