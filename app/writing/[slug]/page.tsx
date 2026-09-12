@@ -14,7 +14,7 @@ function getPost(slug: string) {
 }
 
 function displayDate(value: string) {
-  return new Intl.DateTimeFormat("en", { day: "numeric", month: "long", year: "numeric" }).format(new Date(`${value}T00:00:00Z`));
+  return new Intl.DateTimeFormat("en", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${value}T00:00:00Z`));
 }
 
 export function generateStaticParams() {

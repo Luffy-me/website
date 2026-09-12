@@ -30,6 +30,16 @@ export type AcademicPaper = {
 // and include sources in `references` when you make research-based claims.
 export const blogPosts: BlogPost[] = [
   {
+    slug: "education-in-russia-scholarship-journey",
+    href: "/education-in-russia-scholarship-journey",
+    title: "My Education in Russia Scholarship Journey",
+    summary: "How I received a Russian Government Scholarship, began my master’s degree in Chelyabinsk, and learned what funded study in Russia actually covers.",
+    publishedAt: "2026-09-12",
+    updatedAt: "2026-09-12",
+    topic: "Education in Russia",
+    sections: [],
+  },
+  {
     slug: "south-ural-state-university-experience-review",
     href: "/south-ural-state-university-experience-review",
     title: "South Ural State University Experience: My Honest Review",
