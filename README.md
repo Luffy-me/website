@@ -1,8 +1,8 @@
-# vinext-starter
+# Dey Intelligence Website
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Personal website and portfolio for Abhishek Dey, built with
+[vinext](https://github.com/cloudflare/vinext), Next.js, and optional
+Cloudflare D1 + Drizzle support.
 
 ## Prerequisites
 
