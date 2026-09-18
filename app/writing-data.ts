@@ -17,12 +17,12 @@ export type BlogPost = {
 
 export type AcademicPaper = {
   title: string;
-  summary: string;
-  publishedAt: string;
-  updatedAt?: string;
-  publication?: string;
+  publicationType: string;
+  year: string;
+  description: string;
+  researchAreas: readonly string[];
+  status: string;
   href: string;
-  doi?: string;
 };
 
 // Add a post here to publish a complete, indexable article at /writing/[slug].
@@ -52,4 +52,26 @@ export const blogPosts: BlogPost[] = [
 
 // Add public papers, reviews, preprints, or conference material here.
 // Use a direct PDF, DOI, SSRN, Google Scholar, or publisher link in `href`.
-export const academicPapers: AcademicPaper[] = [];
+export const academicPapers: AcademicPaper[] = [
+  {
+    title: "Beyond the Agent Label: Evidence Maturity, Human Monitoring, and Governance of Agentic AI in Higher Education — A Critical Integrative Review",
+    publicationType: "Preprint / Review Article",
+    year: "2026",
+    description: "A critical integrative review examining the evidence maturity of agentic AI systems in higher education, focusing on governance frameworks, meaningful human oversight, and responsible AI deployment.",
+    researchAreas: ["Artificial Intelligence", "AI Governance", "Educational Technology", "Higher Education"],
+    status: "Preprint",
+    // TODO: Replace with the public EdArXiv or OSF URL.
+    href: "ADD_EDARXIV_OR_OSF_LINK",
+  },
+  {
+    title: "Exchange-Rate Pass-Through and Food Inflation in Russia: Evidence from Monthly Data",
+    publicationType: "Research Article",
+    year: "2026",
+    description: "An empirical economics study investigating the relationship between exchange-rate movements and food inflation in Russia using monthly macroeconomic data.",
+    researchAreas: ["Economics", "International Finance", "Inflation", "Macroeconomics"],
+    // Update this label when the paper's publication state is confirmed.
+    status: "Published / Submitted",
+    // TODO: Replace with the journal page or DOI URL.
+    href: "ADD_JOURNAL_OR_DOI_LINK",
+  },
+];
