@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f0e7"/>
+  <circle cx="1020" cy="90" r="250" fill="none" stroke="#d9c5b5" stroke-width="2"/>
+  <circle cx="1010" cy="90" r="200" fill="none" stroke="#a9c6b2" stroke-width="2"/>
+  <rect x="650" y="105" width="330" height="400" rx="26" fill="#17231f" transform="rotate(6 815 305)"/>
+  <rect x="710" y="395" width="165" height="82" rx="12" fill="#f4f0e7" transform="rotate(-6 792 436)"/>
+  <text x="90" y="120" fill="#64746a" font-family="monospace" font-size="22" letter-spacing="4">DEY INTELLIGENCE · CHROME EXTENSION</text>
+  <text x="90" y="245" fill="#17231f" font-family="Georgia, serif" font-size="92">Keep the ideas</text>
+  <text x="90" y="340" fill="#d97757" font-family="Georgia, serif" font-size="92">worth returning to.</text>
+  <text x="95" y="420" fill="#5e5d59" font-family="Arial, sans-serif" font-size="28">A local-first home for highlights, notes, PDFs, and reading.</text>
+  <text x="90" y="555" fill="#64746a" font-family="monospace" font-size="19" letter-spacing="3">OPENHIGHLIGHTS · LOCAL BY DEFAULT</text>
+</svg>
