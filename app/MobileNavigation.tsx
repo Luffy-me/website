@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { LogoMark } from "./LogoMark";
 import { ThemeToggle } from "./ThemeToggle";
+import { WebsiteTranslator } from "./WebsiteTranslator";
 import { navigationItems, profile } from "./site-config";
 
 export function MobileNavigation({ active }: { active: string }) {
@@ -13,7 +14,7 @@ export function MobileNavigation({ active }: { active: string }) {
     <div className="mobile-bar">
       <Link href="/" className="brand" onClick={close}><LogoMark /><span><strong>Dey Intelligence</strong><small>by {profile.name}</small></span></Link>
       <div className="mobile-actions">
-        <a className="translator-button translator-button-compact" href="https://translate.google.com/?sl=en&tl=ru&op=translate" target="_blank" rel="noreferrer" aria-label="Open English to Russian translator">EN→RU</a>
+        <WebsiteTranslator compact />
         <ThemeToggle />
         <button className={`menu-button${open ? " is-open" : ""}`} type="button" aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen((value) => !value)}><span className="menu-icon" aria-hidden="true" /></button>
       </div>
