@@ -1,4 +1,5 @@
 import { ThemeToggle } from "./ThemeToggle";
+import { WebsiteTranslator } from "./WebsiteTranslator";
 import Link from "next/link";
 import { LogoMark } from "./LogoMark";
 import { navigationItems, profile } from "./site-config";
@@ -7,7 +8,7 @@ export function SiteSidebar({ active }: { active: string }) {
   return <aside className="sidebar">
     <div className="sidebar-section sidebar-brand-section">
       <Link className="brand" href="/"><LogoMark /><span><strong>Dey Intelligence</strong><small>by {profile.name}</small></span></Link>
-      <div className="brand-actions"><a className="translator-button" href="https://translate.google.com/?sl=en&tl=ru&op=translate" target="_blank" rel="noreferrer" aria-label="Open English to Russian translator">Translate EN→RU</a><ThemeToggle /></div>
+      <div className="brand-actions"><WebsiteTranslator /><ThemeToggle /></div>
     </div>
     <div className="sidebar-section">
       <p className="bio">A personal research and product studio by <a href="/about">{profile.name}</a>.</p>
