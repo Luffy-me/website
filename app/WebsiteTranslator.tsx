@@ -18,10 +18,12 @@ export function WebsiteTranslator({ compact = false }: { compact?: boolean }) {
       title="Read this page in Russian"
       onClick={(event) => {
         // Preserve the current page, filters, and section when following the link.
-        pageUrl.search = window.location.search;
-        pageUrl.hash = window.location.hash;
-        translationUrl.searchParams.set("u", pageUrl.href);
-        event.currentTarget.href = translationUrl.href;
+        const currentPage = new URL(pageUrl.href);
+        currentPage.search = window.location.search;
+        currentPage.hash = window.location.hash;
+        const destination = new URL(translationUrl.href);
+        destination.searchParams.set("u", currentPage.href);
+        event.currentTarget.href = destination.href;
       }}
     >
       {compact ? "EN→RU" : "Translate EN→RU"}
