@@ -1,0 +1,36 @@
+.sia-page { max-width: 76rem; }
+.sia-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(18rem, .95fr); gap: 3rem; align-items: center; padding-top: 4.5rem; }
+.sia-hero h1 { margin-bottom: 1.2rem; font-size: clamp(2.8rem, 6.4vw, 5.4rem); line-height: .94; letter-spacing: -.06em; }
+.sia-hero h1 em { color: var(--accent); font-style: normal; }
+.sia-lede { max-width: 38rem; margin: 0 0 1.6rem; font-size: clamp(1.08rem, 2vw, 1.3rem); line-height: 1.6; }
+.sia-soon { display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.1rem; border: 1px dashed var(--border-strong); border-radius: var(--radius-sm); color: var(--text-secondary); font-size: var(--text-sm); }
+.sia-badges { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.6rem 0 0; padding: 0; list-style: none; }
+.sia-badges li { padding: .22rem .7rem; border: 1px solid var(--success); border-radius: 999px; color: var(--success); font-family: var(--mono); font-size: .68rem; font-weight: 600; text-transform: uppercase; }
+.sia-shot { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-md); background: var(--surface-elevated); }
+.sia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin-top: 2rem; }
+.sia-card { padding: 1.3rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-elevated); }
+.sia-card h3 { margin-bottom: .4rem; font-size: 1.1rem; letter-spacing: -.02em; }
+.sia-card p { margin: 0; color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.55; }
+.sia-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; margin: 2rem 0 0; padding: 0; list-style: none; counter-reset: s; }
+.sia-steps li { counter-increment: s; padding: 1.3rem; border-top: 2px solid var(--accent); background: var(--surface); border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+.sia-steps li::before { display: block; margin-bottom: .5rem; color: var(--accent); content: "0" counter(s); font-family: var(--mono); font-size: .75rem; font-weight: 700; }
+.sia-steps strong { display: block; margin-bottom: .3rem; }
+.sia-steps span { color: var(--text-secondary); font-size: var(--text-sm); }
+.sia-two { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3rem; align-items: center; }
+.sia-table { width: 100%; margin-top: 1.5rem; border-collapse: collapse; font-size: var(--text-sm); }
+.sia-table th, .sia-table td { padding: .75rem .9rem .75rem 0; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.sia-table th { width: 30%; color: var(--text-muted); font-weight: 600; }
+.sia-scroll { overflow-x: auto; }
+.sia-faq details { padding: 1rem 0; border-bottom: 1px solid var(--border); }
+.sia-faq summary { cursor: pointer; font-weight: 600; }
+.sia-faq p { margin: .5rem 0 0; color: var(--text-secondary); }
+.sia-final { max-width: 46rem; padding-bottom: 6rem; }
+.sia-final h2 { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: .95; }
+.sia-policy { max-width: 52rem; }
+.sia-policy h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+.sia-policy h2 { margin-top: 2.4rem; font-size: 1.6rem; }
+.sia-policy li { margin-bottom: .5rem; }
+.sia-callout { padding: 1rem 1.3rem; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface); font-size: 1.15rem; font-weight: 600; }
+.sia-policy code, .sia-table code { padding: .05rem .35rem; border-radius: .3rem; background: var(--surface); font-family: var(--mono); font-size: .85em; }
+@media (max-width: 900px) { .sia-hero, .sia-two { grid-template-columns: 1fr; gap: 2rem; padding-top: 3rem; } }
+@media (max-width: 600px) { .sia-page { padding-inline: 1rem; } .sia-table th { width: 38%; } }
