@@ -65,7 +65,7 @@ export const academicPapers: AcademicPaper[] = [
     researchAreas: ["Generative AI", "Stack Overflow", "Knowledge Commons"],
     status: "Preprint",
     // TODO: Replace with the public SSRN abstract page URL.
-    href: "ADD_SSRN_LINK",
+    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7555720",
     venue: "SSRN",
     mark: "SSRN",
   },
