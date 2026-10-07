@@ -53,7 +53,7 @@ export const researchCards: CardItem[] = academicPapers.map((paper, i) => {
 });
 
 const presentation: Record<string, { mark: string; color: string; kind: string; logo?: string }> = {
-  uniassist: { mark: "UA", color: "#141414", kind: "Telegram assistant" },
+  uniassist: { mark: "UA", color: "#141414", kind: "Telegram assistant", logo: "/images/uniassist/logo.svg" },
   "ozon-price-tracker": { mark: "OPT", color: "#f26a21", kind: "Chrome extension" },
   openhighlights: { mark: "OH", color: "#1f7a4d", kind: "Chrome extension" },
   "save-image-as": { mark: "PNG", color: "#2f6fed", kind: "Chrome extension", logo: "/images/save-image-as/icon128.png" },
