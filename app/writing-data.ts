@@ -60,8 +60,7 @@ export const academicPapers: AcademicPaper[] = [
     description: "A critical integrative review examining the evidence maturity of agentic AI systems in higher education, focusing on governance frameworks, meaningful human oversight, and responsible AI deployment.",
     researchAreas: ["Artificial Intelligence", "AI Governance", "Educational Technology", "Higher Education"],
     status: "Preprint",
-    // TODO: Replace with the public EdArXiv or OSF URL.
-    href: "ADD_EDARXIV_OR_OSF_LINK",
+    href: "https://osf.io/va5pz_v1",
   },
   {
     title: "Exchange-Rate Pass-Through and Food Inflation in Russia: Evidence from Monthly Data",
