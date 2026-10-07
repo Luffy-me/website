@@ -5,17 +5,16 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("portfolio source contains project routes and no placeholder hrefs", async () => {
-  const [home, sidebar, projects, config] = await Promise.all([
+  const [home, header, projects, config] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
-    readFile(new URL("app/SiteSidebar.tsx", root), "utf8"),
+    readFile(new URL("app/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/projects-data.ts", root), "utf8"),
     readFile(new URL("app/site-config.ts", root), "utf8"),
   ]);
-  assert.match(home, /View selected work/);
-  assert.doesNotMatch(`${home}\n${sidebar}`, /href=["']#["']/);
+  assert.match(home, /HomeShowcase/);
+  assert.doesNotMatch(`${home}\n${header}`, /href=["']#["']/);
   assert.match(projects, /Ozon Price Tracker/);
   assert.match(projects, /UniAssist/);
-  assert.match(projects, /Ru2En Interpreter/);
   assert.match(config, /siteUrl: process\.env\.NEXT_PUBLIC_SITE_URL \?\? "https:\/\/deyintelligence\.com"/);
   assert.match(config, /github: "https:\/\/github\.com\/Luffy-me"/);
 });

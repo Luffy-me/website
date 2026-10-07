@@ -3,10 +3,9 @@
 These font files are bundled locally so the site does not depend on a third-party
 font service at runtime.
 
-- `dey-serif.woff2`: Source Serif 4 by Adobe
-- `dey-sans.woff2`: Noto Sans by the Noto Project
-- `dey-mono.woff2`: JetBrains Mono by JetBrains
+- `hanken-grotesk.woff2`: Hanken Grotesk (variable, weights 100–900, Latin subset) by Hanken Design Co.
+- `dm-mono-400.woff2`, `dm-mono-500.woff2`: DM Mono (Latin subset) by Colophon Foundry
 
-All three families are distributed under the SIL Open Font License 1.1. Their
-original sources and license records are available from the Google Fonts
-repositories for Source Serif 4, Noto Sans, and JetBrains Mono.
+Both families are distributed under the SIL Open Font License 1.1. The files come
+from the Fontsource packages `@fontsource-variable/hanken-grotesk` and
+`@fontsource/dm-mono`, which include the license records.

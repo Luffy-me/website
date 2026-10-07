@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MobileNavigation } from "../MobileNavigation";
 import { SiteFooter } from "../SiteFooter";
-import { SiteSidebar } from "../SiteSidebar";
+import { SiteHeader } from "../SiteHeader";
 import "./save-image-as.css";
 
 // Set this to the Chrome Web Store listing URL once the extension is published.
@@ -57,7 +56,7 @@ function GetButton({ label }: { label: string }) {
 }
 
 export default function SaveImageAsPage() {
-  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
     <main className="page-content sia-page" id="main-content">
       <section className="sia-hero">
         <div>

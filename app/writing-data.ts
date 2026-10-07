@@ -23,6 +23,9 @@ export type AcademicPaper = {
   researchAreas: readonly string[];
   status: string;
   href: string;
+  // Short venue name and monogram used on the home page research cards.
+  venue: string;
+  mark: string;
 };
 
 // Add a post here to publish a complete, indexable article at /writing/[slug].
@@ -54,6 +57,19 @@ export const blogPosts: BlogPost[] = [
 // Use a direct PDF, DOI, SSRN, Google Scholar, or publisher link in `href`.
 export const academicPapers: AcademicPaper[] = [
   {
+    title: "Generative AI and the Public Programming Commons: What We Know About Stack Overflow After ChatGPT, 2023–2026",
+    publicationType: "Preprint / Working Paper",
+    year: "2026",
+    // TODO: Replace this line with the abstract from the SSRN page.
+    description: "A working paper on what is known about Stack Overflow, one of the web's largest public programming commons, after the arrival of ChatGPT, covering 2023 to 2026.",
+    researchAreas: ["Generative AI", "Stack Overflow", "Knowledge Commons"],
+    status: "Preprint",
+    // TODO: Replace with the public SSRN abstract page URL.
+    href: "ADD_SSRN_LINK",
+    venue: "SSRN",
+    mark: "SSRN",
+  },
+  {
     title: "Beyond the Agent Label: Evidence Maturity, Human Monitoring, and Governance of Agentic AI in Higher Education — A Critical Integrative Review",
     publicationType: "Preprint / Review Article",
     year: "2026",
@@ -61,6 +77,8 @@ export const academicPapers: AcademicPaper[] = [
     researchAreas: ["Artificial Intelligence", "AI Governance", "Educational Technology", "Higher Education"],
     status: "Preprint",
     href: "https://osf.io/va5pz_v1",
+    venue: "OSF Preprints",
+    mark: "OSF",
   },
   {
     title: "Exchange-Rate Pass-Through and Food Inflation in Russia: Evidence from Monthly Data",
@@ -68,9 +86,11 @@ export const academicPapers: AcademicPaper[] = [
     year: "2026",
     description: "An empirical economics study investigating the relationship between exchange-rate movements and food inflation in Russia using monthly macroeconomic data.",
     researchAreas: ["Economics", "International Finance", "Inflation", "Macroeconomics"],
-    // Update this label when the paper's publication state is confirmed.
-    status: "Published / Submitted",
+    // Submitted to Post-Communist Economies on 8 September 2026. Update when the decision arrives.
+    status: "Under review",
     // TODO: Replace with the journal page or DOI URL.
     href: "ADD_JOURNAL_OR_DOI_LINK",
+    venue: "Post-Communist Economies",
+    mark: "PCE",
   },
 ];
