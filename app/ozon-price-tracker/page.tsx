@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MobileNavigation } from "../MobileNavigation";
 import { SiteFooter } from "../SiteFooter";
-import { SiteSidebar } from "../SiteSidebar";
+import { SiteHeader } from "../SiteHeader";
 import "./ozon-price-tracker.css";
 
 const chromeWebStoreUrl = "https://chromewebstore.google.com/detail/ozon-price-tracker/dodppojnnlcmbjeenenmpalmiikkmfkh";
@@ -39,7 +38,7 @@ function ChartVisual() {
 }
 
 export default function OzonPriceTrackerPage() {
-  return <div className="site-shell op-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+  return <div className="site-shell op-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
     <main className="page-content op-page" id="main-content">
       <section className="op-hero"><div className="op-hero-copy"><p className="eyebrow">A Dey Intelligence product · Chrome extension</p><h1>Know when the<br /><em>price is right.</em></h1><p className="op-lede">Ozon Price Tracker gives every price a history—so you can spot real drops, set your target, and buy with context instead of urgency.</p><div className="hero-actions"><a className="button button-primary" href={chromeWebStoreUrl} target="_blank" rel="noreferrer">Add to Chrome <span aria-hidden="true">↗</span></a><a className="text-action" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a><span className="op-available"><i /> Published product</span></div><div className="op-proof"><span><b>Private by design</b> Stored on your device</span><span><b>Watch automatically</b> Target-price alerts</span><span><b>Always portable</b> Import and export</span></div></div><div className="op-hero-art"><div className="op-badge">PRICE<br /><strong>DROP</strong><small>−18%</small></div><div className="op-receipt"><small>PRICE CHECK · TODAY</small><strong>7 490 ₽</strong><span>Previous price <s>9 090 ₽</s></span><div><i />Target reached</div></div><div className="op-ring ring-one" /><div className="op-ring ring-two" /></div></section>
       <section className="op-ticker" aria-label="Product benefits"><span>TRACK</span><i>↓</i><span>COMPARE</span><i>↓</i><span>WAIT</span><i>↓</i><span>SAVE</span><i>↓</i><span>TRACK</span></section>
