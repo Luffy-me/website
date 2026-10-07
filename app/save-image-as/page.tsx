@@ -6,7 +6,7 @@ import { SiteHeader } from "../SiteHeader";
 import "./save-image-as.css";
 
 // Set this to the Chrome Web Store listing URL once the extension is published.
-const chromeWebStoreUrl: string | null = null;
+const chromeWebStoreUrl: string | null = "https://chrome.google.com/webstore/detail/ghmmpjlfacblejdpglabgonjpkplogkh";
 
 const title = "Save Image As PNG – Image Saver & Converter";
 const description = "Right-click any image and save it as PNG, JPG, WebP or AVIF. Grab all images as a ZIP, copy as PNG, shrink to a target file size. Offline, no tracking, no account.";

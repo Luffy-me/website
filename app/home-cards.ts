@@ -76,7 +76,7 @@ export const projectCards: CardItem[] = projects.map((project, i) => {
     status: project.status,
     body: project.currentStatus,
     points: project.capabilities,
-    href: project.href,
-    linkLabel: "Project page",
+    href: project.links?.live ?? project.href,
+    linkLabel: project.links?.live ? "Chrome Web Store" : "Project page",
   };
 });
