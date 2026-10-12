@@ -2,9 +2,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MobileNavigation } from "../MobileNavigation";
 import { SiteFooter } from "../SiteFooter";
-import { SiteSidebar } from "../SiteSidebar";
+import { SiteHeader } from "../SiteHeader";
 import { profile } from "../site-config";
 
 const title = "South Ural State University Experience: My Honest Review";
@@ -146,7 +145,7 @@ export default function SouthUralExperiencePage() {
     ],
   };
 
-  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="writing & research" /><MobileNavigation active="writing & research" />
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="writing & research" />
     <main className="page-content" id="main-content">
       <article className="experience-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />

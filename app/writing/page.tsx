@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MobileNavigation } from "../MobileNavigation";
 import { SiteFooter } from "../SiteFooter";
-import { SiteSidebar } from "../SiteSidebar";
+import { SiteHeader } from "../SiteHeader";
 import { profile } from "../site-config";
 import { academicPapers, blogPosts } from "../writing-data";
 
@@ -23,7 +22,7 @@ function hasPublicLink(href: string) {
 
 export default function WritingPage() {
   const papersSchema = academicPapers.length > 0 ? { "@context": "https://schema.org", "@graph": academicPapers.map((paper) => ({ "@type": "ScholarlyArticle", headline: paper.title, description: paper.description, datePublished: paper.year, genre: paper.publicationType, keywords: paper.researchAreas.join(", "), author: { "@id": `${profile.siteUrl}/about#person`, "@type": "Person", name: profile.name }, ...(hasPublicLink(paper.href) ? { url: paper.href } : {}) })) } : undefined;
-  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="writing & research" /><MobileNavigation active="writing & research" />
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="writing & research" />
     <main className="page-content" id="main-content">{papersSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(papersSchema) }} />}
       <section className="writing-hero"><p className="eyebrow">Ideas in public</p><h1>Writing &amp; research</h1><p>Notes on building useful AI systems, software, economics, and the research that informs the work.</p></section>
       <section className="writing-section ruled" aria-labelledby="notes-heading"><div className="writing-section-heading"><div><p className="eyebrow">Blog</p><h2 id="notes-heading">Notes</h2></div><p>Short essays, product thinking, and working observations.</p></div>{blogPosts.length > 0 ? <div className="writing-list">{blogPosts.map((post) => <article className="writing-entry" key={post.slug}><div className="writing-entry-meta"><span>{post.topic}</span><time dateTime={post.publishedAt}>{displayDate(post.publishedAt)}</time></div><h3><Link href={post.href ?? `/writing/${post.slug}`}>{post.title} <span aria-hidden="true">→</span></Link></h3><p>{post.summary}</p></article>)}</div> : <p className="writing-empty">New notes will appear here. Add a post in <code>app/writing-data.ts</code> when it is ready to publish.</p>}</section>

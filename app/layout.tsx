@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./redesign.css";
 import { profile } from "./site-config";
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: "try { const saved = localStorage.getItem('theme'); const theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.dataset.theme = theme; document.documentElement.style.colorScheme = theme; } catch {}" }} /></head>
+      <head><link rel="preload" href="/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /><script dangerouslySetInnerHTML={{ __html: "try { if (location.pathname === '/' || location.pathname === '/index.html') { var seen = sessionStorage.getItem('introSeen'); var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches; document.documentElement.dataset.intro = (seen || reduce) ? 'skip' : 'play'; } } catch {}" }} /><script dangerouslySetInnerHTML={{ __html: "try { const saved = localStorage.getItem('theme'); const theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.dataset.theme = theme; document.documentElement.style.colorScheme = theme; } catch {}" }} /></head>
       <body>{children}</body>
     </html>
   );

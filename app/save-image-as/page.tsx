@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MobileNavigation } from "../MobileNavigation";
 import { SiteFooter } from "../SiteFooter";
-import { SiteSidebar } from "../SiteSidebar";
+import { SiteHeader } from "../SiteHeader";
 import "./save-image-as.css";
 
 // Set this to the Chrome Web Store listing URL once the extension is published.
-const chromeWebStoreUrl: string | null = null;
+const chromeWebStoreUrl: string | null = "https://chrome.google.com/webstore/detail/ghmmpjlfacblejdpglabgonjpkplogkh";
 
 const title = "Save Image As PNG – Image Saver & Converter";
 const description = "Right-click any image and save it as PNG, JPG, WebP or AVIF. Grab all images as a ZIP, copy as PNG, shrink to a target file size. Offline, no tracking, no account.";
@@ -57,7 +56,7 @@ function GetButton({ label }: { label: string }) {
 }
 
 export default function SaveImageAsPage() {
-  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
     <main className="page-content sia-page" id="main-content">
       <section className="sia-hero">
         <div>

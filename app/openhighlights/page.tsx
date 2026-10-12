@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MobileNavigation } from "../MobileNavigation";
 import { SiteFooter } from "../SiteFooter";
-import { SiteSidebar } from "../SiteSidebar";
+import { SiteHeader } from "../SiteHeader";
 import "./openhighlights.css";
 
 export const metadata: Metadata = {
@@ -59,7 +58,7 @@ function PdfVisual() {
 const chromeWebStoreUrl = "https://chrome.google.com/webstore/detail/lblgdcjmhddgpphgbpihphfnnmagnmhk";
 
 export default function OpenHighlightsPage() {
-  return <div className="site-shell oh-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+  return <div className="site-shell oh-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
     <main className="page-content oh-page" id="main-content">
       <section className="oh-hero"><div className="oh-hero-copy"><p className="eyebrow">A Dey Intelligence product · Chrome extension</p><h1>Keep the ideas<br /><em>worth returning to.</em></h1><p className="oh-lede">OpenHighlights is a local-first reading library for the passages, notes, and documents you do not want to lose between tabs.</p><div className="hero-actions"><a className="button button-primary" href={chromeWebStoreUrl} target="_blank" rel="noreferrer">Add to Chrome <span aria-hidden="true">↗</span></a><a className="text-action" href="#see-it">See how it works <span aria-hidden="true">↓</span></a><span className="oh-coming">Chrome Web Store · Published</span></div><div className="oh-trust-line"><span><b>Local by default</b> No upload path</span><span><b>Your formats</b> Markdown & JSON</span><span><b>Yours to keep</b> Export any time</span></div></div><div className="oh-hero-art"><div className="oh-orbit oh-orbit-one" /><div className="oh-orbit oh-orbit-two" /><div className="oh-hero-card"><span className="oh-card-label">OPENHIGHLIGHTS</span><strong>14</strong><span>thoughts kept close</span><div className="oh-card-line"><i /><i /><i /><i /></div><small>all on this device</small></div><div className="oh-hero-note">“The best<br />software leaves<br />you in control.”</div></div></section>
       <section className="oh-marquee" aria-label="Product principles"><span>CLIP</span><i>✦</i><span>ANNOTATE</span><i>✦</i><span>RETURN</span><i>✦</i><span>OWN</span><i>✦</i><span>CLIP</span></section>

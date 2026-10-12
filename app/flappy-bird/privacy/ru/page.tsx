@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MobileNavigation } from "../../../MobileNavigation";
 import { SiteFooter } from "../../../SiteFooter";
-import { SiteSidebar } from "../../../SiteSidebar";
+import { SiteHeader } from "../../../SiteHeader";
 import { profile } from "../../../site-config";
 import "../../flappy-bird.css";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function FlappyBirdPrivacyRuPage() {
-  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
     <main className="page-content fb-page" id="main-content" lang="ru">
       <article className="fb-policy">
         <p className="eyebrow"><Link href="/flappy-bird" lang="en">← Flappy Bird</Link> · <Link href="/flappy-bird/privacy" hrefLang="en" lang="en">English version</Link></p>

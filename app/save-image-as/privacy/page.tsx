@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MobileNavigation } from "../../MobileNavigation";
 import { SiteFooter } from "../../SiteFooter";
-import { SiteSidebar } from "../../SiteSidebar";
+import { SiteHeader } from "../../SiteHeader";
 import { profile } from "../../site-config";
 import "../save-image-as.css";
 
@@ -32,7 +31,7 @@ const permissions = [
 ];
 
 export default function SaveImageAsPrivacyPage() {
-  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
     <main className="page-content sia-page" id="main-content">
       <article className="sia-policy">
         <p className="eyebrow"><Link href="/save-image-as">← Save Image As</Link></p>

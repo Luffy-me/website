@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MobileNavigation } from "../MobileNavigation";
 import { SiteFooter } from "../SiteFooter";
-import { SiteSidebar } from "../SiteSidebar";
+import { SiteHeader } from "../SiteHeader";
 import { profile } from "../site-config";
 import "./flappy-bird.css";
 
@@ -66,7 +65,7 @@ const built = [
 ];
 
 export default function FlappyBirdPage() {
-  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteSidebar active="work" /><MobileNavigation active="work" />
+  return <div className="site-shell"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     <main className="page-content fb-page" id="main-content">
       <section className="fb-hero">
