@@ -4,6 +4,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <p><strong>{profile.brand}</strong> · A personal research and product studio by {profile.name}.</p>
       <p>© 2026 {profile.name}</p>
+      <p><a href="/flappy-bird/privacy">Flappy Bird privacy policy</a> · <a href="/flappy-bird/privacy/ru" hrefLang="ru" lang="ru">Политика конфиденциальности</a></p>
       <a
         href="https://www.producthunt.com/products/openhighlights-keep-what-matters?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-openhighlights-keep-what-matters"
         target="_blank"
