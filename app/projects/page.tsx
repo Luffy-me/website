@@ -4,10 +4,10 @@ import { SiteFooter } from "../SiteFooter";
 import { SiteHeader } from "../SiteHeader";
 import { projects } from "../projects-data";
 
-export const metadata: Metadata = { title: "Work — Dey Intelligence", description: "Focused Chrome extensions by Dey Intelligence, including Ozon Price Tracker and OpenHighlights.", alternates: { canonical: "/projects" }, openGraph: { url: "/projects" } };
+export const metadata: Metadata = { title: "Work — Dey Intelligence", description: "Focused products by Dey Intelligence: Chrome extensions such as Ozon Price Tracker and OpenHighlights, and the Android game Flappy Bird.", alternates: { canonical: "/projects" }, openGraph: { url: "/projects" } };
 
 export default function ProjectsPage() {
   return <div className="site-shell projects-page"><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader active="work" />
-    <main className="page-content" id="main-content"><section className="projects-hero"><p className="eyebrow">Selected products</p><h1>Work</h1><p>Focused browser tools that make everyday information easier to understand and keep.</p></section><section className="project-grid projects-grid-full" aria-label="Projects">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</section><SiteFooter /></main>
+    <main className="page-content" id="main-content"><section className="projects-hero"><p className="eyebrow">Selected products</p><h1>Work</h1><p>Focused browser tools and small apps that make everyday information easier to understand and keep.</p></section><section className="project-grid projects-grid-full" aria-label="Projects">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</section><SiteFooter /></main>
   </div>;
 }

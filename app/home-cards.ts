@@ -56,6 +56,7 @@ const presentation: Record<string, { mark: string; color: string; kind: string; 
   uniassist: { mark: "UA", color: "#141414", kind: "Telegram assistant", logo: "/images/uniassist/logo.svg" },
   "ozon-price-tracker": { mark: "OPT", color: "#f26a21", kind: "Chrome extension" },
   openhighlights: { mark: "OH", color: "#1f7a4d", kind: "Chrome extension" },
+  "flappy-bird": { mark: "FB", color: "#f5a623", kind: "Android game", logo: "/images/flappy-bird/icon-192.webp" },
   "save-image-as": { mark: "PNG", color: "#2f6fed", kind: "Chrome extension", logo: "/images/save-image-as/icon128.png" },
 };
 

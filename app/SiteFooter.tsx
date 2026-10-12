@@ -12,6 +12,10 @@ export function SiteFooter() {
         <a href={profile.links.github}>GitHub</a>
         <a href={profile.links.linkedin}>LinkedIn</a>
       </div>
+      <div className="mono footer-links">
+        <a href="/flappy-bird/privacy">Flappy Bird privacy policy</a>
+        <a href="/flappy-bird/privacy/ru" hrefLang="ru" lang="ru">Политика конфиденциальности</a>
+      </div>
       <a
         className="producthunt"
         href="https://www.producthunt.com/products/openhighlights-keep-what-matters?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-openhighlights-keep-what-matters"
